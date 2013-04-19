@@ -1,0 +1,32 @@
+
+<div class= "Designers" style="margin:20px">
+  <h1>Designers</h1>
+
+  <table>
+    <tr>
+      <th>Specialization</th>
+      <th>Description</th>
+      <th>User</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+
+    <% @designers.each do |designer| %>
+        <tr>
+          <td><%= designer.specialization_category_id %></td>
+          <td><%= designer.description %></td>
+          <td><%= designer.user_id %></td>
+          <td><%= link_to 'Show', designer %></td>
+          <td><%= link_to 'Edit', edit_designer_path(designer) %></td>
+          <td><%= link_to 'Destroy', designer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+    <% end %>
+  </table>
+  <%= link_to 'New Designer', new_designer_path %>
+</div>
+
+
+<br />
+
+

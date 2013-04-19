@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  category_id: 1
+  prize_amount: 1
+  private: false
+  featured: false
+  style_concept: MyText
+  schedule: MyText
+  rooms: MyText
+  contest_length: 1
+
+two:
+  category_id: 1
+  prize_amount: 1
+  private: false
+  featured: false
+  style_concept: MyText
+  schedule: MyText
+  rooms: MyText
+  contest_length: 1

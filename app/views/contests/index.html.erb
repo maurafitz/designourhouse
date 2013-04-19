@@ -1,0 +1,44 @@
+
+<h1 style="margin:20px">Contests</h1>
+
+<table style="margin:20px">
+  <tr>
+    <th>Category</th>
+    <th>Prize Amount</th>
+    <th>Private</th>
+    <th>Featured</th>
+    <th>Style Concept</th>
+    <th>Schedule</th>
+    <th>Rooms</th>
+    <th>Contest Length</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @contests.each do |contest| %>
+  <tr>
+
+    <td><%= contest.category.name %></td>
+
+    <td><%= contest.prize_amount %></td>
+
+    <td><%= contest.private %></td>
+    <td><%= contest.featured %></td>
+    <td><%= contest.style_concept %></td>
+    <td><%= contest.schedule %></td>
+    <td><%= contest.rooms %></td>
+    <td><%= contest.contest_length %></td>
+    <td><%= link_to 'Show', contest %></td>
+    <td><%= link_to 'Edit', edit_contest_path(contest) %></td>
+    <td><%= link_to 'Destroy', contest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<%if user_signed_in?%>
+    <div class="button" style="margin:20px"><%= link_to 'New Contest', new_contest_path %>
+                  <%end%>
+</div>
+

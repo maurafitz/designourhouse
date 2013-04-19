@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  specialization_category_id: 1
+  description: MyText
+  user_id: 1
+
+two:
+  specialization_category_id: 1
+  description: MyText
+  user_id: 1

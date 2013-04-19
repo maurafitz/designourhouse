@@ -1,0 +1,49 @@
+<%= form_for(@contest) do |f| %>
+  <% if @contest.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@contest.errors.count, "error") %> prohibited this contest from being saved:</h2>
+
+      <ul>
+      <% @contest.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :category_id %><br />
+    <%= f.collection_select :category_id, Category.all, :id, :name %>
+  </div>
+  <div class="field">
+    <%= f.label :prize_amount %><br />
+    <%= f.number_field :prize_amount, min: 500, max: 3000 %>
+  </div>
+  <div class="field">
+    <%= f.label :private %><br />
+    <%= f.check_box :private %>
+  </div>
+  <div class="field">
+    <%= f.label :featured %><br />
+    <%= f.check_box :featured %>
+  </div>
+  <div class="field">
+    <%= f.label :style_concept %><br />
+    <%= f.text_area :style_concept %>
+  </div>
+  <div class="field">
+    <%= f.label :schedule %><br />
+    <%= f.text_area :schedule %>
+  </div>
+  <div class="field">
+    <%= f.label :rooms %><br />
+    <%= f.text_area :rooms %>
+  </div>
+  <div class="field">
+    <%= f.label :contest_length %><br />
+    <%= f.number_field :contest_length, min: 10%>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

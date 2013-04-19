@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  contest_id: 1
+  designer_id: 1
+  at: 2013-04-19 14:56:25
+
+two:
+  contest_id: 1
+  designer_id: 1
+  at: 2013-04-19 14:56:25
