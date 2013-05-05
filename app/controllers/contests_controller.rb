@@ -9,7 +9,9 @@ class ContestsController < ApplicationController
       format.json { render json: @contests }
     end
   end
+  def create_client
 
+  end
   # GET /contests/1
   # GET /contests/1.json
   def show
