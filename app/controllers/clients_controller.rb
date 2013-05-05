@@ -37,7 +37,9 @@ class ClientsController < ApplicationController
   def edit
     @client = Client.find(params[:id])
   end
+  def create_client
 
+  end
   # POST /clients
   # POST /clients.json
   def create
