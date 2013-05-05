@@ -9,7 +9,8 @@ class ClientsController < ApplicationController
       format.json { render json: @clients }
     end
   end
-
+  def sign_in
+  end
   # GET /clients/1
   # GET /clients/1.json
   def show

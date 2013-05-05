@@ -11,6 +11,9 @@ Designourhouse::Application.routes.draw do
   get '/designers/sign_in' => 'Designers#sign_in'
   get '/designers/sign_up' => 'Designers#sign_up'
   post '/designers/sign_up' => 'Designers#create_designer'
+  get '/clients/sign_in' => 'Clients#sign_in'
+  get '/clients/sign_up' => 'Clients#sign_up'
+
   resources :designers
 
   # The priority is based upon order of creation:
