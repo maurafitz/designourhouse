@@ -8,6 +8,7 @@ Designourhouse::Application.routes.draw do
   root to: 'home#index'
 
   resources :clients
+  get '/designers/sign_in' => 'Designers#sign_in'
   get '/designers/sign_up' => 'Designers#sign_up'
   post '/designers/sign_up' => 'Designers#create_designer'
   resources :designers

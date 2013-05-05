@@ -1,0 +1,20 @@
+UCode To Do:
+
+Create two different logins (client and designer), then use that to label that user as either a designer or client- to use when they login (determines which start page they use)
+
+-Designer profile and client profile (home pages):
+For Designer:
+Create table of previous contests associated with their user id
+Create table of current contests associated with their user id
+
+Create a link back to edit the profile that everyone sees
+
+For Client:
+Create table of current contests they have associated with their user id
+Create table of previous contests they have with their user id
+
+
+Add photo function of paperclip
+
+
+
