@@ -19,13 +19,6 @@ ActiveRecord::Schema.define(:version => 20130419215625) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "client_profiles", :force => true do |t|
-    t.integer  "user_id"
-    t.date     "date_joined"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
   create_table "clients", :force => true do |t|
     t.integer  "user_id"
     t.datetime "created_at", :null => false
@@ -44,14 +37,6 @@ ActiveRecord::Schema.define(:version => 20130419215625) do
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
     t.integer  "client_id"
-  end
-
-  create_table "designer_profiles", :force => true do |t|
-    t.integer  "user_id"
-    t.date     "date_joined"
-    t.string   "alias_name"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
   end
 
   create_table "designers", :force => true do |t|

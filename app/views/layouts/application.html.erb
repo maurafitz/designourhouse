@@ -23,13 +23,13 @@
 
 <div class="row" style="max-width:none">
   <!--<div class= "small-2 columns">
-    <div class="logo" style="float: left;"> <%= image_tag "designourhouselogoV2.png", width: 60 %> </div>
+    <div class="logo" style="float: left;"> <%= image_tag 'designourhouselogoV2.png', width: 60 %> </div>
   </div>-->
 <div class= "small-12 columns">
     <nav class="top-bar">
       <ul class="title-area">
         <li class="name">
-          <h1><a href="/"><%= image_tag "designourhouselogoV2.png", width: 60 %></a></h1>
+          <a href="/"><%= image_tag 'designourhouselogoV2_white.png', width: 60, style: "margin: 2.5px 5px 2.5px 5px" %></a>
         </li>
         <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
       </ul>
@@ -45,12 +45,19 @@
           <li class= "divider"></li>
           <li><a href="/how_it_works">How It Works</a></li>
           <% if user_signed_in? %>
+          <li class= "divider"></li>
           <li><a href="/designer_profiles">My Homepage</a></li>
            <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
 
-          <%else %>
-              <li><a href="/designers/sign_in">Designer Sign In</a></li>
+          <% else %>
+              <li class= "divider"></li>
+              <li><a href="/clients/sign_up">Client Sign Up</a></li>
+              <li class= "divider"></li>
               <li><a href="/clients/sign_in">Client Sign In</a></li>
+              <li class= "divider"></li>
+              <li><a href="/designers/sign_up">Designer Sign Up</a></li>
+              <li class= "divider"></li>
+              <li><a href="/designers/sign_in">Designer Sign In</a></li>
               <li></li>
           <%end%>
           <li class= "divider"></li>
