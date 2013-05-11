@@ -38,7 +38,9 @@ class ClientsController < ApplicationController
     @client = Client.find(params[:id])
   end
   def create_client
-
+    user = User.create(email: params[:email], password: params[:password])
+    Client.create(user_id: user.id)
+    redirect_to '/clients/dashboard'
   end
   # POST /clients
   # POST /clients.json
