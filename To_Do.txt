@@ -13,9 +13,3 @@ For Client:
 Create table of current contests they have associated with their user id
 Create table of previous contests they have with their user id
 
-
-Add photo function of paperclip
-
-In designercontroller and clientcontroller methods create_designer and create_client, create a new user
-and link to a new designer or new client
-
