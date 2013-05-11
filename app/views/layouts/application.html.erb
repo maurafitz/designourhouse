@@ -41,14 +41,11 @@
           <li class="divider"></li>
           <li><a href="/designers">Designers</a>    </li>
           <li class= "divider"></li>
-          <li><a href="/clients">Clients</a></li>
-          <li class= "divider"></li>
-          <li><a href="/how_it_works">How It Works</a></li>
+        </ul>
+        <ul class="right"
           <% if user_signed_in? %>
-          <li class= "divider"></li>
           <li><a href="/designer_profiles">My Homepage</a></li>
-           <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
-
+            <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>>
           <% else %>
               <li class= "divider"></li>
               <li><a href="/clients/sign_up">Client Sign Up</a></li>
@@ -60,7 +57,6 @@
               <li><a href="/designers/sign_in">Designer Sign In</a></li>
               <li></li>
           <%end%>
-
         </ul>
       </section>
     </nav>
