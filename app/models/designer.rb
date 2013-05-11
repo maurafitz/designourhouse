@@ -5,6 +5,6 @@ class Designer < ActiveRecord::Base
 
   has_many :contests, through: :participations
   has_many :participations
-
+  belongs_to :user
 
 end
