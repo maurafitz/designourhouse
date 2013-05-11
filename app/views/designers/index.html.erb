@@ -4,12 +4,10 @@
 
   <table>
     <tr>
+      <th>Picture</th>
       <th>Specialization</th>
       <th>Description</th>
       <th>User</th>
-      <th></th>
-      <th></th>
-      <th></th>
     </tr>
 
     <% @designers.each do |designer| %>
@@ -17,15 +15,10 @@
           <td><%= designer.specialization_category_id %></td>
           <td><%= designer.description %></td>
           <td><%= designer.user_id %></td>
-          <td><%= link_to 'Show', designer %></td>
-          <td><%= link_to 'Edit', edit_designer_path(designer) %></td>
-          <td><%= link_to 'Destroy', designer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
     <% end %>
   </table>
-  <%= link_to 'New Designer', new_designer_path %>
 </div>
-
 
 <br />
 
