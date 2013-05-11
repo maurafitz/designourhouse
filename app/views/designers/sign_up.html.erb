@@ -22,14 +22,14 @@
       </div>
       <div class= "row">
         <div class= "large-12 columns">
-          <%= label_tag :description, 'Enter a description of your typical work as a designer' %>
+          <%= label_tag :description, 'Enter a description of yourself and your typical work as a designer' %>
             <%= text_area_tag :description %>
         </div>
       </div>
       <div class = "row">
         <div class= "large-12 columns">
           <%=label_tag :specialization_category, 'Type of Designer' %>
-          <%=number_field_tag :specialization_category%>
+          <%=select_tag :specialization_category_id, options_from_collection_for_select(Category.all, 'id', 'name') %>
         </div>
       </div>
       <div class="row">
