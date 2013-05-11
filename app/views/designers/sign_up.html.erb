@@ -1,6 +1,6 @@
 <div class="row">
   <h2>Designer Sign Up</h2>
-  <%=form_tag('/designers/sign_up', method: 'post', class: 'custom') do %>
+  <%=form_tag('/designers/sign_up', method: 'post', class: 'custom', multipart: true) do %>
       <%= devise_error_messages! %>
       <div class="row">
         <div class="large-12 columns">
@@ -30,6 +30,12 @@
         <div class= "large-12 columns">
           <%=label_tag :specialization_category, 'Type of Designer' %>
           <%=select_tag :specialization_category_id, options_from_collection_for_select(Category.all, 'id', 'name') %>
+        </div>
+      </div>
+      <div class= "row">
+        <div class= "large-12 columns">
+          <%= label_tag :photo, 'Profile Photo' %>
+            <%= file_field_tag :photo %>
         </div>
       </div>
       <div class="row">

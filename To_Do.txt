@@ -1,7 +1,6 @@
 UCode To Do:
 
-Create two different logins (client and designer), then use that to label that user as either a designer
-or client-to use when they login (determines which start page they use)
+Create Dashboard pages
 
 -Designer profile and client profile (home pages):
 For Designer:

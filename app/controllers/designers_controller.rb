@@ -14,8 +14,8 @@ class DesignersController < ApplicationController
   end
   def create_designer
     user = User.create(email: params[:email], password: params[:password])
-    Designer.create(description: params[:description], specialization_category: params[:specialization_category], user_id: user.id)
-    redirect_to '/designers/dashboard'
+    Designer.create(description: params[:description], specialization_category_id: params[:specialization_category], user_id: user.id)
+    redirect_to '/dashboard'
   end
   def sign_in
   end

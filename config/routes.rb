@@ -1,4 +1,6 @@
 Designourhouse::Application.routes.draw do
+  get "dashboard" => 'Dashboard#index'
+
   devise_for :users
 
   resources :categories
@@ -13,7 +15,7 @@ Designourhouse::Application.routes.draw do
   get '/clients/sign_in' => 'Clients#sign_in'
   get '/clients/sign_up' => 'Clients#sign_up'
   post '/clients/sign_up' => 'Clients#create_client'
-  get ''
+
 
   resources :clients
   resources :designers
