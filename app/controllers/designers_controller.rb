@@ -15,7 +15,7 @@ class DesignersController < ApplicationController
   def create_designer
     user = User.create(email: params[:email], password: params[:password])
     Designer.create(description: params[:description], specialization_category_id: params[:specialization_category], user_id: user.id)
-    sign_in_by_web()
+    sign_in(:user, user)
     redirect_to '/dashboard'
   end
   def sign_in_by_web
