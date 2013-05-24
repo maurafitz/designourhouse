@@ -40,6 +40,7 @@ class ClientsController < ApplicationController
   def create_client
     user = User.create(email: params[:email], password: params[:password])
     Client.create(user_id: user.id)
+    sign_in(user)
     redirect_to '/clients/dashboard'
   end
   # POST /clients

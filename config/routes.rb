@@ -13,6 +13,8 @@ Designourhouse::Application.routes.draw do
   get '/clients/sign_in' => 'Clients#sign_in_by_web'
   get '/clients/sign_up' => 'Clients#sign_up'
   post '/clients/sign_up' => 'Clients#create_client'
+  get '/clients/dashboard' => 'Dashboard#index'
+  get '/designers/dashboard' => 'Dashboard#index'
 
   resources :clients
   resources :designers

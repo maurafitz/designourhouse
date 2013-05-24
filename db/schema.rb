@@ -11,12 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130419215625) do
+ActiveRecord::Schema.define(:version => 20130524001918) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "client_profiles", :force => true do |t|
+    t.integer  "user_id"
+    t.date     "date_joined"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "clients", :force => true do |t|
@@ -39,12 +46,24 @@ ActiveRecord::Schema.define(:version => 20130419215625) do
     t.integer  "client_id"
   end
 
+  create_table "designer_profiles", :force => true do |t|
+    t.integer  "user_id"
+    t.date     "date_joined"
+    t.string   "alias_name"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
   create_table "designers", :force => true do |t|
     t.integer  "specialization_category_id"
     t.text     "description"
     t.integer  "user_id"
     t.datetime "created_at",                 :null => false
     t.datetime "updated_at",                 :null => false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
   create_table "participations", :force => true do |t|
@@ -70,6 +89,7 @@ ActiveRecord::Schema.define(:version => 20130419215625) do
     t.datetime "updated_at",                             :null => false
     t.boolean  "designer"
     t.boolean  "client"
+    t.string   "username"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
